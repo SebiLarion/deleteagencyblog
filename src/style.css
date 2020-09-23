@@ -1,0 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+@media (min-width: 960px) {
+    .top-navbar {
+      display: inline-flex !important;
+    }
+};
+
+body{
+font-family: 'IBM Plex Sans', sans-serif;
+}
+.fontBebas{
+  font-family: 'Bebas Neue', cursive;
+}
+
+nav, .footer-mid {
+  background-color: #1A1A1A
+}
+
+.footer-head {
+  background-color: #262626;
+}
