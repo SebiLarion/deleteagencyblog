@@ -1,14 +1,7 @@
-$(document).ready(function() {
-    $(".nav-toggler").each(function(_, navToggler) {
-      var target = $(navToggler).data("target");
-      $(navToggler).on("click", function() {
-        $(target).animate({
-          height: "toggle"
-         
-        });
-      });
-    });
-  });
-
-  
+new Vue({
+  el:"#app",
+  data:{
+    isOpen: false
+  }
+});
   

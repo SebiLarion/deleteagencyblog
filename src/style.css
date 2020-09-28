@@ -8,23 +8,294 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-@media (min-width: 960px) {
-    .top-navbar {
-      display: inline-flex !important;
+@layer base {
+
+  @font-face {
+    font-family: Avant Garde;
+    font-weight: 400;
+    src: url(../fonts/AvantGardeBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: BebasNeue-Regular;
+    font-weight: 400;
+    src: url(../fonts/BebasNeue-Regular.woff) format("woff");
+  }
+
+  @font-face {
+    font-family: Trade Gothic;
+    font-weight: 400;
+    src: url(../fonts/TradeGothicLT.woff) format("woff");
+  }
+
+  p {
+    @apply leading-8 tracking-normal text-base text-black mb-4 pb-4;
+  }
+
+  h1 {
+    @apply max-w-screen-xl p-6 text-center mb-0 text-4xl font-normal text-black leading-10 fontAvantGarde;
+  }
+
+  h3 {
+    @apply my-4 text-3xl font-bold fontAvantGarde;
+  }
+
+  h4 {
+    @apply my-4 text-xl font-bold fontAvantGarde;
+  }
+
+  header {
+    @apply mx-auto flex items-center max-w-screen-xl p-10 flex-wrap z-50 relative;
+  }
+
+  nav a {
+    @apply pr-3 pl-5 py-3 font-bold text-2xl items-center justify-center text-white;
+  }
+
+  nav div {
+    @apply fontAvantGarde items-start flex flex-col;
+  }
+
+  main {
+    @apply max-w-screen-xl mx-auto;
+  }
+
+
+  @screen md {
+    p {
+      @apply text-lg;
     }
-};
+
+    h1 {
+      @apply leading-tight text-6xl tracking-tighter;
+    }
+
+    h3 {
+      @apply text-4xl;
+    }
+
+    h4 {
+      @apply text-2xl;
+    }
+    nav a {
+      @apply inline-flex w-auto mt-0 font-normal text-sm;
+    }
+    nav div {
+      @apply inline-flex flex-row ml-auto w-auto h-auto items-center;
+    }
+    
+  };
+
+}
+
+@layer components {
+
+  nav a:hover {
+    @apply text-red-600;
+  }
+
+  .head-div {
+    @apply max-w-screen-xl flex justify-between items-start pl-6 pr-16;
+  }
+
+  .head-title-div{
+    @apply max-w-screen-xl mx-10;
+  }
+
+  .head-link-div{
+    @apply max-w-screen-xl my-auto p-6 flex justify-center items-center;
+  }
+
+  .head-text-div{
+    @apply fontAvantGarde font-normal leading-6 text-sm;
+
+  }
+
+  .blogContent-container {
+    @apply max-w-screen-xl flex items-start pt-12 pl-6 pr-16;
+  }
+
+  .blogContentImg {
+    @apply w-full h-full mb-8;
+  }
+
+  .header-div {
+    @apply flex items-center w-screen justify-between px-4 py-3 mx-0 my-auto;
+  }
+
+  .seo {
+    @apply fontBebas relative uppercase text-base leading-4 tracking-widest text-red-500;
+  }
+
+  .blog-inscription-red {
+    @apply fontBebas block uppercase leading-8 tracking-widest text-xs text-red-500;
+  }
+
+  .blog-inscription {
+    @apply fontBebas block uppercase font-hairline tracking-widest text-xl leading-5 text-gray-700;
+  }
+
+  .seo:hover {
+    @apply underline;
+  }
+
+  .blog-inscription:hover {
+    @apply text-gray-900;
+  }
+
+  .ul-content {
+    @apply tracking-normal text-base text-black my-4 pb-12 leading-loose list-disc list-inside;
+  }
+
+  .highlighted {
+    @apply text-red-500 text-lg;
+  }
+
+  .highlighted:hover {
+    @apply underline text-red-700;
+  }
+
+  .blog-related-container {
+    @apply max-w-6xl mx-0 my-auto pt-4 pr-10 pl-6; md:pl-32
+  }
+
+ 
+  .blog-related-div {
+    @apply mx-0 my-auto pb-12 border-b border-gray-600;
+  }
+
+  .blog-related-span {
+    @apply fontAvantGarde block w-full text-center text-4xl font-normal leading-10;
+
+  }
+
+  .blog-related-autor {
+    @apply mb-4 w-20 h-20 mr-12 text-center hidden;
+  }
+
+  .social-link-list {
+    @apply block px-2;
+  }
+
+  .social-link {
+    @apply flex justify-center items-center border-2 border-red-500 rounded-full h-10 w-10;
+  }
+
+  .social-link:hover {
+    @apply bg-red-500;
+  }
+
+  .office-title {
+    @apply block text-white text-center text-lg fontAvantGarde;
+  }
+
+  .office-title:hover {
+    @apply text-red-500;
+  }
+
+  .office-number {
+    @apply m-0 text-white;
+  }
+
+  .office-number:hover {
+    @apply text-red-500;
+  }
+
+  .footer-down ul {
+    @apply flex flex-col items-center my-0 mx-auto py-3;
+
+  }
+
+  .policies {
+    @apply text-white text-xs;
+  }
+
+  .footer-mid-ul {
+    @apply flex flex-col justify-between max-w-3xl my-0 mx-auto p-10;
+  }
+
+  .footer-inscription {
+    @apply fontBebas block uppercase tracking-widest text-gray-700;
+  }
+
+  .footer-button {
+    @apply fontAvantGarde hidden border-2 border-solid border-red-500 py-5 px-6 text-white leading-none font-bold;
+  }
+
+
+  @screen md {
+    .head-title-div{
+      @apply pl-6 ml-32 mr-24 pr-4;
+    }
+
+    .header-div{
+      @apply w-auto;
+    }
+
+    .head-text-div{
+      @apply leading-9 text-2xl;
+    }
+
+    .ul-content {
+      @apply text-lg;
+    }
+
+    .blog-related-container {
+      @apply pl-32;
+    }
+
+    .blog-related-span {
+      @apply leading-tight text-5xl tracking-tighter;
+    }
+
+    .blog-related-autor {
+      @apply block;
+    }
+  
+
+    .footer-down ul {
+      @apply px-10 flex-row ;
+    }
+
+    .footer-mid-ul {
+      @apply flex-row;
+  
+    }
+   
+    .footer-button {
+      @apply block;
+    }
+
+  };
+
+  @screen sm {
+    .header-div{
+      @apply p-0;
+    }
+  };
+
+}
 
 body{
-font-family: 'IBM Plex Sans', sans-serif;
-}
-.fontBebas{
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Trade Gothic';
+ }
+
+ .fontBebas{
+  font-family: 'BebasNeue-Regular';
 }
 
-nav, .footer-mid {
-  background-color: #1A1A1A
+.fontAvantGarde {
+  font-family: 'Avant Garde';
+}
+
+header, .footer-mid {
+  background-color: #1A1A1A;
 }
 
 .footer-head {
   background-color: #262626;
+}
+.wrapper {
+  height: 34rem;
+  background-color: #1A1A1A
 }

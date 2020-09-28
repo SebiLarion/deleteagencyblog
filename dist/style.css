@@ -586,6 +586,147 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family: Avant Garde;
+
+  font-weight: 400;
+
+  src: url(../fonts/AvantGardeBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: BebasNeue-Regular;
+
+  font-weight: 400;
+
+  src: url(../fonts/BebasNeue-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: Trade Gothic;
+
+  font-weight: 400;
+
+  src: url(../fonts/TradeGothicLT.woff) format("woff");
+}
+
+p {
+  line-height: 2rem;
+  letter-spacing: 0;
+  font-size: 1rem;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  max-width: 1280px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 2.25rem;
+  font-weight: 400;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  line-height: 2.5rem;
+  font-family: 'Avant Garde';
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-family: 'Avant Garde';
+}
+
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Avant Garde';
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  padding: 2.5rem;
+  flex-wrap: wrap;
+  z-index: 50;
+  position: relative;
+}
+
+nav a {
+  padding-right: 0.75rem;
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+nav div {
+  font-family: 'Avant Garde';
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    line-height: 1.25;
+    font-size: 4rem;
+    letter-spacing: -0.05em;
+  }
+
+  h3 {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-flex;
+    width: auto;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  nav div {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+}
+
 .container {
   width: 100%;
 }
@@ -611,6 +752,361 @@ video {
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+nav a:hover {
+  --text-opacity: 1;
+  color: #e53e3e;
+  color: rgba(229, 62, 62, var(--text-opacity));
+}
+
+.head-div {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 1.5rem;
+  padding-right: 4rem;
+}
+
+.head-title-div{
+  max-width: 1280px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.head-link-div{
+  max-width: 1280px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-text-div{
+  font-family: 'Avant Garde';
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.blogContent-container {
+  max-width: 1280px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 4rem;
+}
+
+.blogContentImg {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.header-div {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.seo {
+  font-family: 'BebasNeue-Regular';
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+}
+
+.blog-inscription-red {
+  font-family: 'BebasNeue-Regular';
+  display: block;
+  text-transform: uppercase;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+}
+
+.blog-inscription {
+  font-family: 'BebasNeue-Regular';
+  display: block;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.seo:hover {
+  text-decoration: underline;
+}
+
+.blog-inscription:hover {
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.ul-content {
+  letter-spacing: 0;
+  font-size: 1rem;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 3rem;
+  line-height: 2;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.highlighted {
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+  font-size: 1.125rem;
+}
+
+.highlighted:hover {
+  text-decoration: underline;
+  --text-opacity: 1;
+  color: #c53030;
+  color: rgba(197, 48, 48, var(--text-opacity));
+}
+
+.blog-related-container {
+  max-width: 72rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 1rem;
+  padding-right: 2.5rem;
+  padding-left: 1.5rem; md:pl-32
+}
+
+.blog-related-div {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-bottom: 3rem;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #718096;
+  border-color: rgba(113, 128, 150, var(--border-opacity));
+}
+
+.blog-related-span {
+  font-family: 'Avant Garde';
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.blog-related-autor {
+  margin-bottom: 1rem;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 3rem;
+  text-align: center;
+  display: none;
+}
+
+.social-link-list {
+  display: block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #f56565;
+  border-color: rgba(245, 101, 101, var(--border-opacity));
+  border-radius: 9999px;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.social-link:hover {
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity));
+}
+
+.office-title {
+  display: block;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: 'Avant Garde';
+}
+
+.office-title:hover {
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+}
+
+.office-number {
+  margin: 0;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.office-number:hover {
+  --text-opacity: 1;
+  color: #f56565;
+  color: rgba(245, 101, 101, var(--text-opacity));
+}
+
+.footer-down ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.policies {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  font-size: 0.75rem;
+}
+
+.footer-mid-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 48rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem;
+}
+
+.footer-inscription {
+  font-family: 'BebasNeue-Regular';
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.footer-button {
+  font-family: 'Avant Garde';
+  display: none;
+  border-width: 2px;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #f56565;
+  border-color: rgba(245, 101, 101, var(--border-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  line-height: 1;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .head-title-div{
+    padding-left: 1.5rem;
+    margin-left: 8rem;
+    margin-right: 6rem;
+    padding-right: 1rem;
+  }
+
+  .header-div{
+    width: auto;
+  }
+
+  .head-text-div{
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+  }
+
+  .ul-content {
+    font-size: 1.125rem;
+  }
+
+  .blog-related-container {
+    padding-left: 8rem;
+  }
+
+  .blog-related-span {
+    line-height: 1.25;
+    font-size: 3rem;
+    letter-spacing: -0.05em;
+  }
+
+  .blog-related-autor {
+    display: block;
+  }
+
+  .footer-down ul {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    flex-direction: row;
+  }
+
+  .footer-mid-ul {
+    flex-direction: row;
+  }
+
+  .footer-button {
+    display: block;
+  }
+}
+
+@media (min-width: 640px) {
+  .header-div{
+    padding: 0;
   }
 }
 
@@ -21238,26 +21734,29 @@ video {
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@media (min-width: 960px) {
-  .top-navbar {
-    display: inline-flex !important;
-  }
-}
-
 body{
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Trade Gothic';
 }
 
 .fontBebas{
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'BebasNeue-Regular';
 }
 
-nav, .footer-mid {
-  background-color: #1A1A1A
+.fontAvantGarde {
+  font-family: 'Avant Garde';
+}
+
+header, .footer-mid {
+  background-color: #1A1A1A;
 }
 
 .footer-head {
   background-color: #262626;
+}
+
+.wrapper {
+  height: 34rem;
+  background-color: #1A1A1A
 }
 
 @media (min-width: 640px) {
