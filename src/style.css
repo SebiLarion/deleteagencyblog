@@ -45,7 +45,7 @@
   }
 
   header {
-    @apply mx-auto flex items-center max-w-screen-xl p-10 flex-wrap z-50 relative;
+    @apply flex items-center flex-wrap z-50 relative;
   }
 
   nav a {
@@ -95,11 +95,11 @@
   }
 
   .head-div {
-    @apply max-w-screen-xl flex justify-between items-start pl-6 pr-16;
+    @apply max-w-screen-xl flex justify-between items-start pl-6 pr-6;
   }
 
   .head-title-div{
-    @apply max-w-screen-xl mx-10;
+    @apply max-w-screen-xl;
   }
 
   .head-link-div{
@@ -112,7 +112,7 @@
   }
 
   .blogContent-container {
-    @apply max-w-screen-xl flex items-start pt-12 pl-6 pr-16;
+    @apply max-w-screen-xl flex items-start pt-12 pl-6 pr-6;
   }
 
   .blogContentImg {
@@ -120,7 +120,7 @@
   }
 
   .header-div {
-    @apply flex items-center w-screen justify-between px-4 py-3 mx-0 my-auto;
+    @apply flex items-center justify-between px-4 py-3 mx-0 my-auto;
   }
 
   .seo {
@@ -156,7 +156,7 @@
   }
 
   .blog-related-container {
-    @apply max-w-6xl mx-0 my-auto pt-4 pr-10 pl-6; md:pl-32
+    @apply max-w-6xl mx-0 my-auto pt-4 pr-10 pl-6;
   }
 
  
@@ -224,11 +224,19 @@
 
 
   @screen md {
+    .head-div {
+      @apply  pr-16;
+    }
+
+    .blogContent-container {
+      @apply pr-16;
+    }
+
     .head-title-div{
       @apply pl-6 ml-32 mr-24 pr-4;
     }
 
-    .header-div{
+    .header-div {
       @apply w-auto;
     }
 
@@ -290,12 +298,13 @@ body{
 
 header, .footer-mid {
   background-color: #1A1A1A;
+  
 }
 
 .footer-head {
   background-color: #262626;
 }
 .wrapper {
-  height: 34rem;
+  height:32rem;
   background-color: #1A1A1A
 }

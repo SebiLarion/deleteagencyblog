@@ -652,12 +652,8 @@ h4 {
 }
 
 header {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
-  max-width: 1280px;
-  padding: 2.5rem;
   flex-wrap: wrap;
   z-index: 50;
   position: relative;
@@ -767,13 +763,11 @@ nav a:hover {
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 1.5rem;
-  padding-right: 4rem;
+  padding-right: 1.5rem;
 }
 
 .head-title-div{
   max-width: 1280px;
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .head-link-div{
@@ -799,7 +793,7 @@ nav a:hover {
   align-items: flex-start;
   padding-top: 3rem;
   padding-left: 1.5rem;
-  padding-right: 4rem;
+  padding-right: 1.5rem;
 }
 
 .blogContentImg {
@@ -811,7 +805,6 @@ nav a:hover {
 .header-div {
   display: flex;
   align-items: center;
-  width: 100vw;
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -906,7 +899,7 @@ nav a:hover {
   margin-bottom: auto;
   padding-top: 1rem;
   padding-right: 2.5rem;
-  padding-left: 1.5rem; md:pl-32
+  padding-left: 1.5rem;
 }
 
 .blog-related-div {
@@ -1055,6 +1048,14 @@ nav a:hover {
 }
 
 @media (min-width: 768px) {
+  .head-div {
+    padding-right: 4rem;
+  }
+
+  .blogContent-container {
+    padding-right: 4rem;
+  }
+
   .head-title-div{
     padding-left: 1.5rem;
     margin-left: 8rem;
@@ -1062,7 +1063,7 @@ nav a:hover {
     padding-right: 1rem;
   }
 
-  .header-div{
+  .header-div {
     width: auto;
   }
 
@@ -21755,7 +21756,7 @@ header, .footer-mid {
 }
 
 .wrapper {
-  height: 34rem;
+  height:32rem;
   background-color: #1A1A1A
 }
 
