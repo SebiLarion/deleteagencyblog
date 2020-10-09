@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>How To Get A 100 % Lighthouse Performance Score</title>
 </head>
 
-<body class="w-screen">
-  
-  
+<body>
+
   <div class="wrapper w-full absolute h-full z-0 hidden xl:block"> </div>
- 
-      <header id="app" class="justify-center items-start pt-5"  :class="isOpen ? 'w-screen h-screen bg-opacity-25 absolute' : 'h-32'" >
-        <div class="flex max-w-screen-xl w-full flex-col md:flex-row ml-10 mr-10 md:pl-6 md:pr-16">
+  
+      <header  id="app" :class="isOpen ? 'w-full h-screen absolute' : 'h-32 '" >
+        <div class="head-header-div">
         <div class="header-div">
           <div>
-            <a href="#"><img src="../img/logo.PNG" alt="logo"></a>
+            <svg class="delete-logo__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 135" width="160" height="44">
+              <mask id="maskLogo">
+                  <g fill="#FFF">
+                      <path d="M81.163,65.598c0-23.786-12.728-37.17-36.338-37.17H32.097v74.708h12.91         C69.543,103.137,81.163,91.605,81.163,65.598 M0,132.117V0h44.824C65.666,0,80.242,2.789,93.89,15.795         c12.54,11.89,19.18,29.175,19.18,50.918c0,20.075-6.458,36.592-18.998,49.053c-14.013,13.748-26.379,16.353-44.828,16.353         L0,132.117L0,132.117z"></path>
+                      <path d="M184.685,71.725c-3.496-10.211-11.808-15.792-23.428-15.792c-12.174,0-20.833,6.317-22.864,15.792H184.685z         M209.404,103.124c-9.587,20.817-26.004,31.408-48.147,31.408c-15.122,0-27.29-5.19-37.441-15.976         c-9.587-10.223-14.567-22.858-14.567-36.986c0-13.927,5.345-26.76,15.121-36.606c9.964-10.028,23.058-15.603,36.517-15.603         c31.542,0,53.126,22.859,53.126,60.025v3.153h-74.7c2.582,10.584,10.142,16.158,22.875,16.158c5.899,0,10.69-1.664,15.125-5.574         L209.404,103.124L209.404,103.124z"></path>
+                      <rect x="212.315" y="0.003" width="28.961" height="132.114"></rect>
+                      <path d="M314.607,71.725c-3.506-10.211-11.81-15.792-23.431-15.792c-12.168,0-20.846,6.317-22.868,15.792H314.607z         M339.325,103.124c-9.604,20.817-26.003,31.408-48.147,31.408c-15.119,0-27.299-5.19-37.438-15.976         c-9.594-10.223-14.579-22.858-14.579-36.986c0-13.927,5.35-26.76,15.131-36.606c9.954-10.028,23.058-15.603,36.517-15.603         c31.539,0,53.127,22.859,53.127,60.025v3.153h-74.717c2.596,10.584,10.151,16.158,22.885,16.158c5.903,0,10.694-1.664,15.131-5.574         L339.325,103.124L339.325,103.124z"></path>
+                      <polygon points="342.557,0.007 342.557,28.679 330.014,28.679 330.014,50.613 342.557,50.613 342.557,132.115                 372.072,132.115 372.072,50.613 385.165,50.613 385.165,28.679 372.072,28.679 372.072,0.007 "></polygon>
+                      <path d="M446.69,71.725c-3.507-10.211-11.812-15.792-23.429-15.792c-12.17,0-20.834,6.317-22.867,15.792H446.69z         M471.409,103.124c-9.601,20.817-26.015,31.408-48.146,31.408c-15.119,0-27.3-5.19-37.441-15.976         c-9.59-10.223-14.575-22.858-14.575-36.986c0-13.927,5.362-26.76,15.132-36.606c9.955-10.028,23.057-15.603,36.515-15.603         c31.543,0,53.126,22.859,53.126,60.025v3.153h-74.715c2.596,10.584,10.146,16.158,22.885,16.158c5.898,0,10.692-1.664,15.132-5.574         L471.409,103.124L471.409,103.124z"></path>
+                      <rect x="473.578" y="103.126" width="31.014" height="31.243"></rect>
+                      <polygon points="468.017,32.749 468.017,29.361 482.93,29.361 482.93,32.749 477.461,32.749 477.461,47.677                 473.465,47.677 473.465,32.749 "></polygon>
+                      <polygon points="498.973,29.358 494.938,41.957 494.898,41.957 490.637,29.358 485.01,29.358 485.01,47.68                 488.753,47.68 488.753,34.818 488.802,34.818 493.253,47.68 496.339,47.68 500.794,34.698 500.843,34.698 500.843,47.68                 504.586,47.68 504.586,29.358 "></polygon>
+                  </g>
+              </mask>
+              <g mask="url(#maskLogo)">
+                  <rect class="delete-logo__initial" x="0" y="0" width="100%" height="100%" fill="#FFF"></rect>
+                  <rect class="delete-logo__hover" x="0" y="0" width="100%" height="100%" fill="#FFF"></rect>
+              </g>
+          </svg>
            </div>
           <div class="md:hidden inline-flex p-3 ml-auto ">
             <button @click="isOpen = !isOpen" type="button" class="block text-white focus:outline-none ">
@@ -30,25 +49,80 @@
             </button>
           </div>
         </div>
-        <nav :class="isOpen ? 'block' : 'hidden'" class="w-full md:inline-flex md:flex-grow md:w-auto">
-          <div>
-            <a href="#" class="mt-12 md:mt-0"><span>Work</span></a> 
-            <a href="#"><span>About</span></a>
-            <a href="#"><span>Services</span></a>
-            <a href="#"><span>News</span></a>
-            <a href="#"><span>Blog</span></a>
-            <a href="#"><span>Careers</span></a>
-            <a href="#"><span>Contact</span></a>
+        <nav :class="isOpen ? 'block' : 'hidden'" class="md:inline-flex md:flex-grow md:w-auto">
+          <div class="nav-div">
+            <a class="nav-link" href="#" class="mt-12 md:mt-0"><span>Work</span></a> 
+            <a class="nav-link" href="#"><span>About</span></a>
+          
+            <div class="nav-link" 
+            @mouseover = "isHovered=true" 
+            @mouseleave ="isHovered = false"
+            >
+             <a href="#"><span>Services</span></a>
+              <button @click="isPlus = !isPlus" type="button" class="ml-8 text-red-500 md:hidden">
+                <i v-if="!isPlus" class="fas fa-plus"></i>
+                <i v-else="isPlus" class="fas fa-minus"></i>
+              </button>
+                <div :class="isPlus || isHovered && !isOpen ? 'block' : 'hidden'" class=" w-auto md:mx-auto">
+                  <div :class="isHovered && !isOpen ? 'subnav' : 'sub'" class="ml-4 md:ml-0 md:absolute w-auto md:w-screen h-auto left-0 md:mt-20">
+                    <div class="mx-auto px-10 max-w-screen-xl md:pt-10">
+                      <div class="mt-2 py-3">  
+                          <a href="" class="text-base fontRoboto text-white font-normal">View all Services</a>
+                      </div>
+                      <ul class="subnav-list">
+                          <li class="subnav-li">
+                              <span class="subnav-span">Strategic Services.</span>
+                              <ul class="subnav-li">
+                                  <li class="subnav-li"><a class="subnav-link">Digital Strategy</a></li>
+                                  <li class="subnav-li"><a class="subnav-link"> Strategy</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Media Planning &amp; Buying</a></li>
+                              </ul>
+                          </li>
+                          <li class="subnav-li">
+                              <span class="subnav-span">Creative Services.</span>
+                              <ul class="subnav-li">
+                                  <li class="subnav-li"><a class="subnav-link">User Experience Design</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Design &amp; Build</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Content Strategy</a></li>
+                              </ul>
+                          </li>
+                          <li class="subnav-li">
+                              <span class="subnav-span">Marketing Services.</span>
+                              <ul class="subnav-li">
+                                  <li class="subnav-li"><a class="subnav-link">Integrated Marketing</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Content Strategy</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">SEO</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">PPC</a></li>
+                              </ul>
+                          </li>
+                          <li class="subnav-li">
+                              <span class="subnav-span">Our Technologies.</span>
+                              <ul class="subnav-li">
+                                  <li class="subnav-li"><a class="subnav-link">Sitecore</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Kentico</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Umbraco</a></li>
+                                  <li class="subnav-li"><a class="subnav-link">Application Management</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+            <a class="nav-link" href="#"><span>News</span></a>
+            <a class="nav-link" href="#"><span>Blog</span></a>
+            <a class="nav-link" href="#"><span>Careers</span></a>
+            <a class="nav-link" href="#"><span>Contact</span></a>
           </div>
         </nav>
       </div>
       </header>
    
     
-      <main class="bg-white">
-     
-      <section class="w-full bg-white relative z-10">
-        
+      <main>
+     	
+      <section class="w-full bg-white relative">
         <div class="head-div">
           <div  class="head-title-div"> 
             <h1>How to get a 100 % Lighthouse performance score</h1>
@@ -62,24 +136,24 @@
         </div>
       </section>
 
-      <section class="w-full bg-white border-b-2">
-        <div class="blogContent-container">
-          <div class="mt-10 pt-10 mr-1 hidden md:block">
+      <section class="w-full border-b-2">
+        <div class="blogContent-container ">
+          <div class="mt-10 pt-10 mr-1 block order-2 md:order-first">
                 <div class="mb-4 block w-20 h-20">
                   <a href="#" class="leading-none">
                   <img class="object-cover w-full h-full" src="../img/poli pospelova.PNG" alt="Polly Pospelova">
                   </a>
                 </div>
-                <div class=" pb-4 mb-4 border-b border-gray-600">
+                <div class="blog-inscription-div">
                   <span class="blog-inscription-red">Written by</span>
                   <a href="" class="blog-inscription">Polly Pospelova</a>
                 </div>
-                <div class="pb-4 mb-4 border-b border-gray-600">
+                <div class="blog-inscription-div">
                   <span class="blog-inscription-red">Date posted</span>
                   <span class="blog-inscription">14 Nov 2019</span>
                 </div>
             </div>
-            <div class="max-w-screen-xl w-full mx-0 md:mx-10 my-10">
+            <div class="blogContent-div">
             <p>
               I was very proud to take the stage and speak at International Search Summit, BrightonSEO and SearchLeeds, especially because I got the chance to talk about a
               subject I find so interesting.
@@ -727,7 +801,7 @@
             </p>
           </div>
 
-          <ul class="flex flex-col items-center mt-8 pt-10 order-3 hidden md:block">
+          <ul class="flex flex-row justify-between w-full mt-8 pt-10 order-3 block md:flex-col md:w-auto md:items-center">
               <li class="m-2 p-2">
                   <a class="social-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.deleteagency.com/blog/how-to-get-a-100-percents-lighthouse-performance-score" onclick="window.open(this.href,'','scrollbars=1,resizable=1,width=400,height=620');return false;" target="_blank" rel="noopener">
                     <i class="fab fa-facebook-f py-5"></i>
@@ -752,17 +826,17 @@
               <div class="blog-related-div">
                   <span class="blog-related-span">Related posts</span>
               </div>
-              <article class="mx-0 pb-16 px-3 border-b border-gray-600 max-w-screen-xl">
+              <article class="mx-0 pb-6 md:pb-16 px-3 border-b border-gray-600 max-w-screen-xl">
                       <div class="mx-0 my-auto pt-10 ">
-                          <div class="flex flex-wrap justify-start pb-10">
+                          <div class="flex flex-wrap justify-start pb-2 md:pb-10">
                                   <div class="relative w-5/6 text-center">
                                     <a href="#" class="seo">SEO</a>
                                   </div>
-                                  <div class="relative w-1/6">
+                                  <div class="relative w-5/6 order-3 text-center md:order-none mt-8 md:mt-0 md:w-1/6">
                                     <span class="footer-inscription">10 Feb 2020</span>
                                   </div>
                                   <div class="relative text-center w-5/6 mt-5">
-                                    <a href="#" class="my-4 text-2xl md:text-4xl fontAvantGarde">
+                                    <a href="#" class="my-4 text-2xl md:text-4xl fontRoboto">
                                         Subdomains vs. Subfolders and ccTLDs vs. TLDs for SEO
                                     </a>
                                  </div>
@@ -783,18 +857,18 @@
                       </div>
               </article>
 
-                  <article class="mx-0 mb-12 px-3 pb-16 border-b border-gray-600">
+                  <article class="mx-0 mb-12 px-3 pb-6 md:pb-16 border-b border-gray-600">
                     <div class="mx-0 my-auto pt-10 max-w-screen-xl">
-                      <div class="flex flex-wrap justify-start pb-10">
+                      <div class="flex flex-wrap justify-start pb-2 md:pb-10">
                         <div class="relative w-5/6 text-center">
                               <a href="#" class="seo">SEO</a>
                         </div>
-                            <div class="relative w-1/6">
+                            <div class="relative w-5/6 order-3 text-center md:order-none mt-8 md:mt-0 md:w-1/6">
                               <span class="footer-inscription">20 ian 2020</span>
                             </div>
 
                             <div class="relative text-center w-5/6 mt-5">
-                              <a href="#" class="my-4 text-2xl md:text-4xl fontAvantGarde justify-items-start">
+                              <a href="#" class="my-4 text-2xl md:text-4xl fontRoboto justify-items-start">
                                   SEO in 2020
                               </a>
                            </div>
@@ -824,7 +898,7 @@
 
      <footer class="block">
         <section class="footer-head">
-            <div class="w-screen max-w-screen-xl flex flex-col-reverse flex-col justify-between items-center my-0 mx-auto py-10 md:flex-row md:py-20 md:px-10">
+            <div class="w-screen max-w-screen-xl flex flex-col-reverse justify-between items-center my-0 mx-auto py-10 md:flex-row md:py-20 md:px-10">
                 <ul class="flex">
                     <li class="social-link-list">
                         <a class="social-link" href="https://www.facebook.com/DeleteAgency" target="_blank" rel="noopener">

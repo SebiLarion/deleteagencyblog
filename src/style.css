@@ -4,66 +4,52 @@
 
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 
 @layer base {
 
-  @font-face {
-    font-family: Avant Garde;
-    font-weight: 400;
-    src: url(../fonts/AvantGardeBold.ttf) format("truetype");
-  }
 
   @font-face {
-    font-family: BebasNeue-Regular;
-    font-weight: 400;
-    src: url(../fonts/BebasNeue-Regular.woff) format("woff");
-  }
-
-  @font-face {
-    font-family: Trade Gothic;
-    font-weight: 400;
-    src: url(../fonts/TradeGothicLT.woff) format("woff");
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('../fonts/Segoe UI.woff') format('woff');
+    }
+  body {
+    @apply w-screen fontMontserat;
   }
 
   p {
-    @apply leading-8 tracking-normal text-base text-black mb-4 pb-4;
+    @apply leading-8 tracking-normal text-sm text-black mb-4 pb-4;
   }
 
   h1 {
-    @apply max-w-screen-xl p-6 text-center mb-0 text-4xl font-normal text-black leading-10 fontAvantGarde;
+    @apply max-w-screen-xl py-6 px-3 text-center mb-0 text-4xl font-normal text-black leading-10 fontRoboto;
   }
 
   h3 {
-    @apply my-4 text-3xl font-bold fontAvantGarde;
+    @apply my-4 text-3xl font-bold fontRoboto;
   }
 
   h4 {
-    @apply my-4 text-xl font-bold fontAvantGarde;
+    @apply my-4 text-xl font-bold fontRoboto;
   }
 
   header {
-    @apply flex items-center flex-wrap z-50 relative;
-  }
-
-  nav a {
-    @apply pr-3 pl-5 py-3 font-bold text-2xl items-center justify-center text-white;
-  }
-
-  nav div {
-    @apply fontAvantGarde items-start flex flex-col;
+    @apply flex flex-wrap justify-center items-start z-50 relative pt-5 overflow-y-scroll;
   }
 
   main {
-    @apply max-w-screen-xl mx-auto;
+    @apply max-w-screen-xl mx-auto bg-white;
   }
 
 
   @screen md {
     p {
       @apply text-lg;
+    }
+
+    header {
+      @apply overflow-visible;
     }
 
     h1 {
@@ -77,15 +63,14 @@
     h4 {
       @apply text-2xl;
     }
-    nav a {
-      @apply inline-flex w-auto mt-0 font-normal text-sm;
-    }
-    nav div {
-      @apply inline-flex flex-row ml-auto w-auto h-auto items-center;
-    }
-    
+ 
   };
 
+  @screen lg {
+    h1 {
+      @apply p-6;
+    }
+  };
 }
 
 @layer components {
@@ -94,6 +79,35 @@
     @apply text-red-600;
   }
 
+  .nav-link {
+    @apply pr-3 pl-5 py-3 font-bold text-2xl items-center justify-center text-white;
+  }
+
+  .nav-div {
+    @apply fontRoboto items-start flex flex-col;
+  }
+
+  .head-header-div {
+    @apply flex max-w-screen-xl w-full flex-col  ml-10 mr-10;
+  }
+
+  .subnav-list{
+    @apply py-3;
+  }
+
+  .subnav-span{
+    @apply pr-3 py-3 mt-5 font-bold text-2xl items-center justify-center text-white;
+  } 
+
+  .subnav-link {
+    @apply text-base fontRoboto text-white py-3;
+  }
+
+  .subnav-li {
+    @apply py-3;
+  }
+
+  
   .head-div {
     @apply max-w-screen-xl flex justify-between items-start pl-6 pr-6;
   }
@@ -107,12 +121,18 @@
   }
 
   .head-text-div{
-    @apply fontAvantGarde font-normal leading-6 text-sm;
+    @apply fontRoboto font-normal leading-6 text-sm ;
 
   }
 
+  .blogContent-div{
+    @apply max-w-screen-xl w-full mx-0 my-10;
+  }
+
+  
+
   .blogContent-container {
-    @apply max-w-screen-xl flex items-start pt-12 pl-6 pr-6;
+    @apply max-w-screen-xl flex flex-col items-start pt-12 pl-6 pr-6;
   }
 
   .blogContentImg {
@@ -124,15 +144,19 @@
   }
 
   .seo {
-    @apply fontBebas relative uppercase text-base leading-4 tracking-widest text-red-500;
+    @apply fontSegoe relative uppercase text-base leading-4 tracking-widest text-red-500;
   }
 
   .blog-inscription-red {
-    @apply fontBebas block uppercase leading-8 tracking-widest text-xs text-red-500;
+    @apply fontSegoe block uppercase leading-8 tracking-widest text-xs text-red-500;
   }
 
   .blog-inscription {
-    @apply fontBebas block uppercase font-hairline tracking-widest text-xl leading-5 text-gray-700;
+    @apply fontSegoe block uppercase font-hairline tracking-widest text-sm leading-5 text-gray-700;
+  }
+
+  .blog-inscription-div{
+    @apply pb-4 mb-4 border-b border-gray-600;
   }
 
   .seo:hover {
@@ -148,7 +172,7 @@
   }
 
   .highlighted {
-    @apply text-red-500 text-lg;
+    @apply text-red-500 text-base;
   }
 
   .highlighted:hover {
@@ -165,7 +189,7 @@
   }
 
   .blog-related-span {
-    @apply fontAvantGarde block w-full text-center text-4xl font-normal leading-10;
+    @apply fontRoboto block w-full text-center text-4xl font-normal leading-10;
 
   }
 
@@ -186,7 +210,7 @@
   }
 
   .office-title {
-    @apply block text-white text-center text-lg fontAvantGarde;
+    @apply block text-white text-center text-lg fontRoboto;
   }
 
   .office-title:hover {
@@ -215,33 +239,54 @@
   }
 
   .footer-inscription {
-    @apply fontBebas block uppercase tracking-widest text-gray-700;
+    @apply fontSegoe block uppercase tracking-widest text-gray-700;
   }
 
   .footer-button {
-    @apply fontAvantGarde hidden border-2 border-solid border-red-500 py-5 px-6 text-white leading-none font-bold;
+    @apply fontRoboto hidden border-2 border-solid border-red-500 py-5 px-6 text-white leading-none font-bold;
   }
 
 
   @screen md {
+
+    .nav-link{
+      @apply inline-flex w-auto mt-0 font-normal text-sm;
+    }
+
+    .nav-link:hover {
+      @apply border-t-2 border-gray-700;
+    }
+    .nav-div {
+      @apply inline-flex flex-row ml-auto w-auto h-auto items-center;
+    }
+
+    .head-header-div {
+      @apply flex-row pl-6 pr-16;
+    }
+    
     .head-div {
       @apply  pr-16;
     }
 
+    .subnav-list{
+      @apply grid gap-4 grid-cols-4;
+    }
+  
+  
     .blogContent-container {
-      @apply pr-16;
+      @apply flex flex-row;
     }
 
     .head-title-div{
-      @apply pl-6 ml-32 mr-24 pr-4;
-    }
+      @apply ml-32 mr-12 ;
+     }
 
     .header-div {
       @apply w-auto;
     }
 
     .head-text-div{
-      @apply leading-9 text-2xl;
+      @apply leading-9 text-2xl ml-0;
     }
 
     .ul-content {
@@ -259,9 +304,8 @@
     .blog-related-autor {
       @apply block;
     }
-  
 
-    .footer-down ul {
+     .footer-down ul {
       @apply px-10 flex-row ;
     }
 
@@ -274,31 +318,75 @@
       @apply block;
     }
 
+    .blog-inscription {
+      @apply text-lg;
+    }
+
+    .highlighted {
+      @apply text-lg;
+    }
+  
+
   };
 
+  @screen lg {
+
+    .head-title-div{
+      @apply pl-6 ml-32 mr-24 pr-4;
+     }
+     
+    .head-text-div{
+      @apply  ml-8;
+    }
+
+    .blogContent-div{
+      @apply mx-10;
+    }
+
+    .blogContent-container {
+      @apply pr-16;
+    }
+
+    
+    };
+
+
   @screen sm {
+
     .header-div{
       @apply p-0;
     }
+   
   };
 
 }
 
-body{
-  font-family: 'Trade Gothic';
+
+.fontMontserat {
+  font-family: 'Montserrat';
+
  }
 
- .fontBebas{
-  font-family: 'BebasNeue-Regular';
+ .fontSegoe{
+  font-family: 'Segoe UI Regular';
 }
 
-.fontAvantGarde {
-  font-family: 'Avant Garde';
+.fontRoboto {
+  font-family: 'Roboto Slab';
 }
 
-header, .footer-mid {
+.footer-mid {
   background-color: #1A1A1A;
   
+}
+header {
+  background-color: rgba(26,26,26,.9);
+}
+.subnav {
+  background-color: #262626;
+}
+.sub {
+  background-color: none;
 }
 
 .footer-head {

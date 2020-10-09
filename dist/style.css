@@ -587,33 +587,24 @@ video {
 }
 
 @font-face {
-  font-family: Avant Garde;
+  font-family: 'Segoe UI Regular';
 
-  font-weight: 400;
+  font-style: normal;
 
-  src: url(../fonts/AvantGardeBold.ttf) format("truetype");
+  font-weight: normal;
+
+  src: local('Segoe UI Regular'), url('../fonts/Segoe UI.woff') format('woff');
 }
 
-@font-face {
-  font-family: BebasNeue-Regular;
-
-  font-weight: 400;
-
-  src: url(../fonts/BebasNeue-Regular.woff) format("woff");
-}
-
-@font-face {
-  font-family: Trade Gothic;
-
-  font-weight: 400;
-
-  src: url(../fonts/TradeGothicLT.woff) format("woff");
+body {
+  width: 100vw;
+  font-family: 'Montserrat';
 }
 
 p {
   line-height: 2rem;
   letter-spacing: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   --text-opacity: 1;
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
@@ -623,7 +614,10 @@ p {
 
 h1 {
   max-width: 1280px;
-  padding: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   text-align: center;
   margin-bottom: 0;
   font-size: 2.25rem;
@@ -632,7 +626,7 @@ h1 {
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
   line-height: 2.5rem;
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
 }
 
 h3 {
@@ -640,7 +634,7 @@ h3 {
   margin-bottom: 1rem;
   font-size: 1.875rem;
   font-weight: 700;
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
 }
 
 h4 {
@@ -648,47 +642,36 @@ h4 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 700;
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
 }
 
 header {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   z-index: 50;
   position: relative;
-}
-
-nav a {
-  padding-right: 0.75rem;
-  padding-left: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  --text-opacity: 1;
-  color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity));
-}
-
-nav div {
-  font-family: 'Avant Garde';
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
+  padding-top: 1.25rem;
+  overflow-y: scroll;
 }
 
 main {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
 }
 
 @media (min-width: 768px) {
   p {
     font-size: 1.125rem;
+  }
+
+  header {
+    overflow: visible;
   }
 
   h1 {
@@ -704,22 +687,11 @@ main {
   h4 {
     font-size: 1.5rem;
   }
+}
 
-  nav a {
-    display: inline-flex;
-    width: auto;
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 0.875rem;
-  }
-
-  nav div {
-    display: inline-flex;
-    flex-direction: row;
-    margin-left: auto;
-    width: auto;
-    height: auto;
-    align-items: center;
+@media (min-width: 1024px) {
+  h1 {
+    padding: 1.5rem;
   }
 }
 
@@ -757,6 +729,70 @@ nav a:hover {
   color: rgba(229, 62, 62, var(--text-opacity));
 }
 
+.nav-link {
+  padding-right: 0.75rem;
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.nav-div {
+  font-family: 'Roboto Slab';
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-header-div {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.subnav-list{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.subnav-span{
+  padding-right: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.subnav-link {
+  font-size: 1rem;
+  font-family: 'Roboto Slab';
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.subnav-li {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .head-div {
   max-width: 1280px;
   display: flex;
@@ -781,15 +817,25 @@ nav a:hover {
 }
 
 .head-text-div{
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
   font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.875rem;
 }
 
+.blogContent-div{
+  max-width: 1280px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .blogContent-container {
   max-width: 1280px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   padding-top: 3rem;
   padding-left: 1.5rem;
@@ -817,7 +863,7 @@ nav a:hover {
 }
 
 .seo {
-  font-family: 'BebasNeue-Regular';
+  font-family: 'Segoe UI Regular';
   position: relative;
   text-transform: uppercase;
   font-size: 1rem;
@@ -829,7 +875,7 @@ nav a:hover {
 }
 
 .blog-inscription-red {
-  font-family: 'BebasNeue-Regular';
+  font-family: 'Segoe UI Regular';
   display: block;
   text-transform: uppercase;
   line-height: 2rem;
@@ -841,16 +887,25 @@ nav a:hover {
 }
 
 .blog-inscription {
-  font-family: 'BebasNeue-Regular';
+  font-family: 'Segoe UI Regular';
   display: block;
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 0.1em;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   --text-opacity: 1;
   color: #4a5568;
   color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.blog-inscription-div{
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #718096;
+  border-color: rgba(113, 128, 150, var(--border-opacity));
 }
 
 .seo:hover {
@@ -881,7 +936,7 @@ nav a:hover {
   --text-opacity: 1;
   color: #f56565;
   color: rgba(245, 101, 101, var(--text-opacity));
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .highlighted:hover {
@@ -915,7 +970,7 @@ nav a:hover {
 }
 
 .blog-related-span {
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
   display: block;
   width: 100%;
   text-align: center;
@@ -965,7 +1020,7 @@ nav a:hover {
   color: rgba(255, 255, 255, var(--text-opacity));
   text-align: center;
   font-size: 1.125rem;
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
 }
 
 .office-title:hover {
@@ -1019,7 +1074,7 @@ nav a:hover {
 }
 
 .footer-inscription {
-  font-family: 'BebasNeue-Regular';
+  font-family: 'Segoe UI Regular';
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1029,7 +1084,7 @@ nav a:hover {
 }
 
 .footer-button {
-  font-family: 'Avant Garde';
+  font-family: 'Roboto Slab';
   display: none;
   border-width: 2px;
   border-style: solid;
@@ -1048,19 +1103,55 @@ nav a:hover {
 }
 
 @media (min-width: 768px) {
+  .nav-link{
+    display: inline-flex;
+    width: auto;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  .nav-link:hover {
+    border-top-width: 2px;
+    --border-opacity: 1;
+    border-color: #4a5568;
+    border-color: rgba(74, 85, 104, var(--border-opacity));
+  }
+
+  .nav-div {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    align-items: center;
+  }
+
+  .head-header-div {
+    flex-direction: row;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+  }
+
   .head-div {
     padding-right: 4rem;
   }
 
+  .subnav-list{
+    display: grid;
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .blogContent-container {
-    padding-right: 4rem;
+    display: flex;
+    flex-direction: row;
   }
 
   .head-title-div{
-    padding-left: 1.5rem;
     margin-left: 8rem;
-    margin-right: 6rem;
-    padding-right: 1rem;
+    margin-right: 3rem;
   }
 
   .header-div {
@@ -1070,6 +1161,7 @@ nav a:hover {
   .head-text-div{
     line-height: 2.25rem;
     font-size: 1.5rem;
+    margin-left: 0;
   }
 
   .ul-content {
@@ -1102,6 +1194,36 @@ nav a:hover {
 
   .footer-button {
     display: block;
+  }
+
+  .blog-inscription {
+    font-size: 1.125rem;
+  }
+
+  .highlighted {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .head-title-div{
+    padding-left: 1.5rem;
+    margin-left: 8rem;
+    margin-right: 6rem;
+    padding-right: 1rem;
+  }
+
+  .head-text-div{
+    margin-left: 2rem;
+  }
+
+  .blogContent-div{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .blogContent-container {
+    padding-right: 4rem;
   }
 }
 
@@ -21731,24 +21853,32 @@ nav a:hover {
           animation: bounce 1s infinite;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-body{
-  font-family: 'Trade Gothic';
+.fontMontserat {
+  font-family: 'Montserrat';
 }
 
-.fontBebas{
-  font-family: 'BebasNeue-Regular';
+.fontSegoe{
+  font-family: 'Segoe UI Regular';
 }
 
-.fontAvantGarde {
-  font-family: 'Avant Garde';
+.fontRoboto {
+  font-family: 'Roboto Slab';
 }
 
-header, .footer-mid {
+.footer-mid {
   background-color: #1A1A1A;
+}
+
+header {
+  background-color: rgba(26,26,26,.9);
+}
+
+.subnav {
+  background-color: #262626;
+}
+
+.sub {
+  background-color: none;
 }
 
 .footer-head {
