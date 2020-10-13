@@ -1117,6 +1117,15 @@ nav a:hover {
     margin-right: 2.5rem;
   }
 
+  .subnav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .subnav-span{
+    font-size: 1.25rem;
+  }
+
   .head-div {
     padding-right: 4rem;
   }
@@ -1215,15 +1224,6 @@ nav a:hover {
     grid-gap: 1rem;
     gap: 1rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .subnav-link {
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  .subnav-span{
-    font-size: 1.25rem;
   }
 
   .subnav-li {
