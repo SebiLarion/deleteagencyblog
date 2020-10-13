@@ -929,7 +929,7 @@ nav a:hover {
 
 .ul-content {
   letter-spacing: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   --text-opacity: 1;
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
@@ -945,7 +945,7 @@ nav a:hover {
   --text-opacity: 1;
   color: #f56565;
   color: rgba(245, 101, 101, var(--text-opacity));
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .highlighted:hover {
@@ -1151,7 +1151,7 @@ nav a:hover {
   }
 
   .ul-content {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .blog-related-container {
@@ -1187,7 +1187,7 @@ nav a:hover {
   }
 
   .highlighted {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 

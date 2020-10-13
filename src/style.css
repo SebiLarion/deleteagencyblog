@@ -178,11 +178,11 @@
   }
 
   .ul-content {
-    @apply tracking-normal text-base text-black my-4 pb-12 leading-loose list-disc list-inside;
+    @apply tracking-normal text-sm text-black my-4 pb-12 leading-loose list-disc list-inside;
   }
 
   .highlighted {
-    @apply text-red-500 text-base;
+    @apply text-red-500 text-sm;
   }
 
   .highlighted:hover {
@@ -272,9 +272,6 @@
       @apply  text-xl;
     } 
 
-
- 
-
     .head-div {
       @apply  pr-16;
     }
@@ -296,7 +293,7 @@
     }
 
     .ul-content {
-      @apply text-lg;
+      @apply text-base;
     }
 
     .blog-related-container {
@@ -329,7 +326,7 @@
     }
 
     .highlighted {
-      @apply text-lg;
+      @apply text-base;
     }
   
   };
