@@ -264,6 +264,8 @@
       
     }
 
+ 
+
     .head-div {
       @apply  pr-16;
     }
@@ -339,6 +341,14 @@
     .subnav-list{
       @apply grid gap-4 grid-cols-4;
     }
+
+    .subnav-link {
+      @apply text-sm font-medium;
+    }
+
+    .subnav-span{
+      @apply  text-xl;
+    } 
 
     .subnav-li {
       @apply py-4;

@@ -1217,6 +1217,15 @@ nav a:hover {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .subnav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .subnav-span{
+    font-size: 1.25rem;
+  }
+
   .subnav-li {
     padding-top: 1rem;
     padding-bottom: 1rem;
