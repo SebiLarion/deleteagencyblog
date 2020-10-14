@@ -602,10 +602,10 @@ body {
 }
 
 p {
-  line-height: 2rem;
+  line-height: 1.75rem;
   letter-spacing: 0;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
@@ -630,7 +630,7 @@ h1 {
 h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Roboto Slab';
 }
@@ -769,7 +769,6 @@ nav a:hover {
 }
 
 .subnav-span{
-  width: auto;
   padding-right: 0.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -784,7 +783,7 @@ nav a:hover {
 }
 
 .subnav-link {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-family: 'Montserrat';
   --text-opacity: 1;
   color: #fff;
@@ -793,13 +792,12 @@ nav a:hover {
 }
 
 .subnav-first-li {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.75rem;
 }
 
 .subnav-li {
-  padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  width: auto;
 }
 
 .head-div {
@@ -846,7 +844,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 3rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -875,7 +872,7 @@ nav a:hover {
   font-family: 'Segoe UI Regular';
   position: relative;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1rem;
   letter-spacing: 0.1em;
   --text-opacity: 1;
@@ -1117,15 +1114,6 @@ nav a:hover {
     margin-right: 2.5rem;
   }
 
-  .subnav-link {
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  .subnav-span{
-    font-size: 1.25rem;
-  }
-
   .head-div {
     padding-right: 4rem;
   }
@@ -1133,6 +1121,7 @@ nav a:hover {
   .blogContent-container {
     display: flex;
     flex-direction: row;
+    padding-top: 0.75rem;
   }
 
   .head-title-div{
@@ -1224,6 +1213,20 @@ nav a:hover {
     grid-gap: 1rem;
     gap: 1rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .subnav-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .subnav-span{
+    font-size: 1.25rem;
+  }
+
+  .subnav-first-li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .subnav-li {

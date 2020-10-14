@@ -20,7 +20,7 @@
   }
 
   p {
-    @apply leading-8 tracking-normal text-sm font-normal mb-4 pb-4;
+    @apply leading-7 tracking-normal text-sm font-medium mb-4 pb-4;
   }
 
   h1 {
@@ -28,7 +28,7 @@
   }
 
   h3 {
-    @apply my-4 text-3xl font-bold fontRoboto;
+    @apply my-4 text-2xl font-bold fontRoboto;
   }
 
   h4 {
@@ -102,19 +102,19 @@
   }
 
   .subnav-span{
-    @apply w-auto pr-3 py-3 mt-5 font-normal text-2xl items-center justify-center text-white;
+    @apply pr-3 py-3 mt-5 font-normal text-2xl items-center justify-center text-white;
   } 
 
   .subnav-link {
-    @apply text-lg fontMontserat text-white font-medium;
+    @apply text-base fontMontserat text-white font-medium;
   }
 
   .subnav-first-li {
-    @apply py-4;
+    @apply pt-3;
   }
 
   .subnav-li {
-    @apply py-1;
+    @apply pb-1 w-auto;
   }
 
   
@@ -142,7 +142,7 @@
   
 
   .blogContent-container {
-    @apply max-w-screen-xl flex flex-col items-start pt-12 pl-6 pr-6;
+    @apply max-w-screen-xl flex flex-col items-start pl-6 pr-6;
   }
 
   .blogContentImg {
@@ -154,7 +154,7 @@
   }
 
   .seo {
-    @apply fontSegoe relative uppercase text-base leading-4 tracking-widest text-red-500;
+    @apply fontSegoe relative uppercase text-sm leading-4 tracking-widest text-red-500;
   }
 
   .blog-inscription-red {
@@ -263,21 +263,13 @@
       @apply ml-10 mr-10;
       
     }
-
-    .subnav-link {
-      @apply text-sm font-medium;
-    }
-
-    .subnav-span{
-      @apply  text-xl;
-    } 
-
+ 
     .head-div {
       @apply  pr-16;
     }
   
       .blogContent-container {
-      @apply flex flex-row;
+      @apply flex flex-row pt-3;
     }
 
     .head-title-div{
@@ -348,8 +340,19 @@
       @apply grid gap-4 grid-cols-4;
     }
 
-  
-    .subnav-li {
+    .subnav-link {
+      @apply text-sm font-semibold;
+    }
+
+    .subnav-span{
+      @apply  text-xl;
+    } 
+
+    .subnav-first-li {
+      @apply py-4;
+    }
+
+      .subnav-li {
       @apply py-4;
     }
   
