@@ -733,10 +733,6 @@ nav a:hover {
 }
 
 .nav-link {
-  padding-right: 1.25rem;
-  padding-left: 1.5rem;
-  padding-bottom: 0.25rem;
-  padding-top: 0.5rem;
   font-weight: 700;
   font-size: 1.875rem;
   align-items: center;
@@ -746,12 +742,25 @@ nav a:hover {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.nav-link-a {
+  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.75rem;
+}
+
+.nav-link-special {
+  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+  padding-top: 0.75rem;
+}
+
 .nav-div {
   font-family: 'Roboto Slab';
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
 }
 
@@ -763,7 +772,7 @@ nav a:hover {
   margin-left: 1.25rem;
 }
 
-.subnav-list{
+.subnav-list {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
@@ -809,11 +818,11 @@ nav a:hover {
   padding-right: 1.5rem;
 }
 
-.head-title-div{
+.head-title-div {
   max-width: 1280px;
 }
 
-.head-link-div{
+.head-link-div {
   max-width: 1280px;
   margin-top: auto;
   margin-bottom: auto;
@@ -823,7 +832,7 @@ nav a:hover {
   align-items: center;
 }
 
-.head-text-div{
+.head-text-div {
   font-family: 'Roboto Slab';
   font-weight: 400;
   line-height: 1.5rem;
@@ -1006,17 +1015,15 @@ nav a:hover {
   align-items: center;
   border-width: 2px;
   --border-opacity: 1;
-  border-color: #f56565;
-  border-color: rgba(245, 101, 101, var(--border-opacity));
+  border-color: #e53e3e;
+  border-color: rgba(229, 62, 62, var(--border-opacity));
   border-radius: 9999px;
   height: 2.5rem;
   width: 2.5rem;
 }
 
 .social-link:hover {
-  --bg-opacity: 1;
-  background-color: #f56565;
-  background-color: rgba(245, 101, 101, var(--bg-opacity));
+  background-color: #e81747;
 }
 
 .office-title {
@@ -1051,6 +1058,7 @@ nav a:hover {
 .footer-down ul {
   display: flex;
   flex-direction: column;
+  max-width: 1280px;
   align-items: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -1089,14 +1097,22 @@ nav a:hover {
   color: rgba(74, 85, 104, var(--text-opacity));
 }
 
+.footer-button-div {
+  text-align: right;
+}
+
+.footer-button-div:hover {
+  background-color: #e81747;
+}
+
 .footer-button {
   font-family: 'Roboto Slab';
   display: none;
   border-width: 2px;
   border-style: solid;
   --border-opacity: 1;
-  border-color: #f56565;
-  border-color: rgba(245, 101, 101, var(--border-opacity));
+  border-color: #e53e3e;
+  border-color: rgba(229, 62, 62, var(--border-opacity));
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   padding-left: 1.5rem;
@@ -1108,10 +1124,40 @@ nav a:hover {
   font-weight: 700;
 }
 
+.cookie-bar {
+  background-color:rgba(0,0,0,.9);
+}
+
+.cookie-button {
+  min-width: 7rem;
+  font-weight: 900;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  position: relative;
+  border-style: solid;
+  --border-opacity: 1;
+  border-color: #e53e3e;
+  border-color: rgba(229, 62, 62, var(--border-opacity));
+  border-width: 2px;
+}
+
+.cookie-button:hover {
+  background-color: #e81747;
+}
+
 @media (min-width: 768px) {
   .head-header-div {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .cookie-button {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .head-div {
@@ -1201,6 +1247,14 @@ nav a:hover {
     line-height: 1rem;
   }
 
+  /* .nav-link-a{
+      @apply inline-flex w-auto mt-0 font-normal text-base tracking-normal leading-4;
+    } */
+
+  .nav-link-special:hover {
+    background-color: #262626;
+  }
+
   .nav-link:hover {
     border-top-width: 2px;
     --border-opacity: 1;
@@ -1217,7 +1271,7 @@ nav a:hover {
 
   .subnav-link {
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .subnav-span{

@@ -13,11 +13,16 @@
 </head>
 
 <body>
-
-  <div class="wrapper w-full absolute z-0 block"></div>
   
-      <header  id="app" :class="isOpen ? 'w-full h-screen absolute' : 'h-24 md:h-32 xl:h-40 '" >
-        <div class="head-header-div">
+ <div class="overflow-y-scroll">
+  <div class="wrapper w-full absolute z-0 block"></div>
+  <template id="app">
+      <div>
+       <div :class="isOpen ? 'block  ' : 'hidden '" class="relative h-24 left-0 top-0">
+         <div class="absolute bg-black w-full h-full "></div>
+       </div>
+       <header :class="isOpen ? 'w-full h-screen absolute' : 'h-24 md:h-32 xl:h-40'" >
+       <div class="head-header-div">
         <div class="header-div">
           <div>
             <svg class="delete-logo__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505 135" width="160" height="44">
@@ -51,19 +56,19 @@
         </div>
         <nav :class="isOpen ? 'block' : 'hidden'" class="lg:inline-flex lg:flex-grow lg:w-auto">
           <div class="nav-div">
-            <a class="nav-link" href="#" class="mt-12 md:mt-0"><span>Work</span></a> 
-            <a class="nav-link" href="#"><span>About</span></a>
+            <a class="nav-link nav-link-a" href="#" class="mt-12 md:mt-0"><span>Work</span></a> 
+            <a class="nav-link nav-link-a" href="#"><span>About</span></a>
             
-            <div class="nav-link" 
+            <div class="nav-link pt-1"
             @mouseover = "isHovered=true" 
             @mouseleave ="isHovered=false"
             >
-             <a href="#"><span>Services</span></a>
+              <a href="#"><span class=" pb-20 nav-link-special ">Services</span></a>
               <button @click="isPlus = !isPlus" type="button" class="ml-8 text-red-500 lg:hidden">
                 <i v-if="!isPlus" class="fas fa-plus"></i>
                 <i v-else="isPlus" class="fas fa-minus"></i>
               </button>
-                <div :class="isPlus || isHovered && !isOpen ? 'block' : 'hidden'" class="w-auto lg:mx-auto">
+              <div :class="isPlus || isHovered && !isOpen ? 'block' : 'hidden'" class="w-auto lg:mx-auto">
                   <div :class="isHovered && !isOpen ? 'subnav' : 'sub'" class="ml-8 w-auto h-auto left-0 lg:ml-0 lg:absolute lg:w-screen lg:mt-20 ">
                     <div class="mx-auto lg:px-10 max-w-screen-xl lg:pt-10">
                       <div class="mt-3 pt-4 lg:mb-4 lg:pb-6">  
@@ -110,18 +115,19 @@
               </div>
             </div>
             
-            <a class="nav-link" href="#"><span>News</span></a>
-            <a class="nav-link" href="#"><span>Blog</span></a>
-            <a class="nav-link" href="#"><span>Careers</span></a>
-            <a class="nav-link" href="#"><span>Contact</span></a>
+            <a class="nav-link nav-link-a" href="#"><span>News</span></a>
+            <a class="nav-link nav-link-a" href="#"><span>Blog</span></a>
+            <a class="nav-link nav-link-a" href="#"><span>Careers</span></a>
+            <a class="nav-link nav-link-a" href="#"><span>Contact</span></a>
           </div>
         </nav>
       </div>
+      </div>
+      </template>
       </header>
-   
     
       <main>
-     	
+        
       <section class="w-full bg-white relative">
         <div class="head-div">
           <div  class="head-title-div"> 
@@ -924,7 +930,7 @@
                 <div class="w-12 h-12 md:w-24 md:h-24 mb-12 md:mt-12 ">
                    <img class="w-full h-full" src="../img/delete.png" alt="delete icon">
                 </div>
-                <div class="text-right hover:bg-red-400">
+                <div class="footer-button-div">
                     <div>
                         <a href="" class="footer-button">
                             <span>Make enquiry</span>
@@ -956,6 +962,7 @@
             </ul>
         </section>
         <section class="footer-down bg-black">
+          <div class="mx-auto">
             <ul>
                 <li class="py-3"><span class="policies">© 2020 Delete Ltd.</span></li>
                 <li class="py-3 md:px-3"><a class="policies hover:text-red-500" href="">Cookie Policy</a></li>
@@ -966,16 +973,24 @@
                         <span class="">Sitecore</span>
                     </a>
                 </li>
-            </ul>
+              </ul>
+            </div>
         </section>
     </footer>
+    <div id="cookies" onclick="hide()" class="cookie-bar block opacity-1 bottom-0 fixed text-white w-full h-auto justify-center items-center"> 
+      <div class="flex flex-row flex-wrap sm:flex-no-wrap justify-between items-center mx-auto my-0 px-5 py-2 md:px-10 md:py-5 max-w-screen-xl">
+        <p class="text-white mb-0 pb-0 font-medium">Our website uses cookies to give you the best possible experience. Click here to agree or read our policy.</p>
+        <a href="#"class="text-white mx-5 md:mx-10 font-bold hover:text-red-500 text-sm md:text-base">Cookie Policy</a>
+        <a href="#" class="cookie-button w-auto text-center text-sm md:text-base inline-block overflow-hidden">I Agree</a>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <script src="https://kit.fontawesome.com/8063449bc7.js" crossorigin="anonymous"></script>
 
   <script src='script.js'></script>
-    
     
     
 </body>
